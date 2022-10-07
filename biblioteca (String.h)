@@ -1,0 +1,7 @@
+strcpy
+strcat
+strlen
+strcmp
+DICAS !
+
+setlocale(LC_ALL,"Portuguese"); Permiti que a aplicação trabalhe com acentos
