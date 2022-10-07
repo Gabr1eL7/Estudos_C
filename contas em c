@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(){
+
+
+    int A, B, soma, subst, divis, mult;
+
+    printf("Digite o primeiro valor: ");
+    scanf("%d", &A);
+
+    printf("Digite o segundo valor: ");
+    scanf("%d", &B);  
+
+    soma = A + B;
+
+    subst = A - B;
+
+    divis = A / B;
+
+    mult = A * B;
+
+    printf("Resultados\n");
+    printf("O valor da soma é: %d \n", soma);
+    printf("O valor da soma é: %d \n", subst);
+    printf("O valor da soma é: %d \n", divis);
+    printf("O valor da soma é: %d \n", mult);
+
+}
