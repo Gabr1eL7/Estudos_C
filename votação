@@ -1,0 +1,83 @@
+#include <stdio.h>
+
+int main() 
+ 
+{
+ //variaveis
+   int voto, i, eleitores, cand1 = 0 , cand2 = 0 , cand3 = 0 , cand4 = 0 , nulo = 0 , branco = 0;
+   float porCand1, porCand2, porCand3, porCand4, porNulo, porBranco;
+
+  
+  printf("Quantas votos teram essas eleições: ");
+  scanf("%d", &eleitores);
+
+//loop para receber os votos com relação a quantidade de eleitores 
+   for(i=1; i<=eleitores; i++){
+   printf("\n Escolha entre as opções a baixo \n");
+   printf(" 1- CANDIDADO 1\n 2- CANDIDADO 2\n 3- CANDIDADO 3\n 4- CANDIDADO 4\n 5- VOTO EM BRANCO\n 6- VOTO NULO\n");
+   scanf("%d", &voto);
+   printf("\n");
+
+
+switch (voto)
+{
+case 1 : 
+   printf("Muito obrigado por exercer a democracia! \n");
+   cand1++;  //para cada voto é somado mais um (canditado 1 = candidato1 + 1 voto)
+break;
+
+case 2 : 
+   printf("Muito obrigado por exercer a democracia! \n");
+   cand2++;
+break;
+
+case 3 : 
+   printf("Muito obrigado por exercer a democracia! \n");
+   cand3++;
+break;
+
+case 4 : 
+   printf("Muito obrigado por exercer a democracia! \n");
+   cand4++;
+break;
+
+case  5 : 
+   printf("Muito obrigado por exercer a democracia! \n");
+   branco++;
+break;
+
+case  6 : 
+   printf("Muito obrigado por exercer a democracia! \n");
+   nulo++;
+break;
+
+}
+}
+//apuração de votos
+int  total = cand1 + cand2 + cand3 + cand4 + nulo + branco;
+
+  
+porCand1 = (100 * cand1 )/ total;
+printf("O candidato 1 recebeu %d votos, totalizando: %.2f %% dos votos! \n", cand1, porCand1);
+
+porCand2 = (100 * cand2 )/ total;
+printf("O candidato 2 recebeu %d votos, totalizando: %.2f %% dos votos! \n", cand2, porCand2);
+
+porCand3 = (100 * cand3 )/ total;
+printf("O candidato 3 recebeu %d votos, totalizando: %.2f %% dos votos! \n", cand3, porCand3);
+
+porCand4 = (100 * cand4 )/ total;
+printf("O candidato 4 recebeu %d votos, totalizando: %.2f %% dos votos! \n", cand4, porCand4);
+
+porBranco = (100 * branco )/ total;
+printf("%.2f %%, dos votos foram BRANCOS! Recebendo: %d, votos \n", porBranco, branco);
+
+porNulo = (100 * nulo)/ total;
+printf("%.2f %%, dos votos foram NULOS! Recebendo: %d, votos \n", porNulo, nulo);
+
+
+
+return 0;
+
+
+}
