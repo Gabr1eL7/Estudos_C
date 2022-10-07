@@ -1,0 +1,28 @@
+ESPECIFICADORES DE FORMATO: printf(%d,%x,%s)
+
+d ou i --> Números inteiros em base decimal (int)
+
+x --> Números inteiros em base hexadecimal
+
+f --> Números em ponto flutuante (com casas decimais) (float)
+
+e --> Números em notação cientifica (com casas decimais)
+
+c --> Caracteres alfanuméricos (texto)
+
+s --> Sequência de caracteres alfanuméricos (texto)
+(único que não precisa do uso do "&")
+
+
+
+DICAS !
+
+.<num> Especifica quantos dígitos serão impressos após a vírgula
+
+ex:"%.2f"
+
+O &("E" comercial) só é usado no scanf para entrada de dados 
+
+fflush(stdin); --> Chamar sempre depois de uma entrada de dados do tipo texto.
+
+%% --> mostrar porcentagem
