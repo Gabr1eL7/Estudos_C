@@ -1,0 +1,121 @@
+Fácil
+
+Elabore um programa que mostre na tela os multiplos de 3, de 1 a 100.
+
+Médio
+
+Elabore um programa que pergunte o salario do usuario e calcule quanto deve pagar de imposto de renda, mensalmente.
+
+Difícil
+
+Elabore um programa que peça ao usuario para inserir um numero inteiro, e devolva o numero de algarismo de um numero.
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+//-1
+#include <stdio.h>
+
+int main() {
+  int i;
+  int x = 100;
+  
+  for(i = 1; i <= 33; i++){
+    x = 3 * i;
+    printf("%d\n", x);
+  }
+    return 0;
+}
+
+
+//-2
+
+
+/*  - BASE PARA CÁLCULO -
+
+   Salario(R$)                   Alíquota(%)          Parcela a deduzir do IRPF(R$)
+ Menor que 1.903,98             InsenÃ§Ã£o de IR                     -
+De 1.903,99 atÃ© 2.826,65            7,5                           142,80
+De 2.826,66 atÃ© 3.751,05             15                           354,80
+De 3.751,06 atÃ© 4.664,68            22,5                          636,13
+Acima de 4.664,69                    27,5                          869,36
+
+
+DEPENDENTES
+
+Para cada dependente Ã© descontado o valor R$ 189,59, os mesmos inclui: conjuge, filhos até 21 anos e pais e avôs.
+
+*/
+
+
+#include <stdio.h>
+int main() {
+
+    //declaração de variaveis
+
+    float salario, paga, result;
+    int dependentes;
+
+    //entrada de dados
+
+    printf("Informe seu salÃ¡rio para calculo do Imposto de Renda \n");
+    printf("Qual seu salÃ¡rio? \n");
+    scanf("%f", &salario);
+
+    printf("VocÃª possui dependentes financeiros (conjuge, filhos atÃ© 21 anos, pais ou avÃ´s)?  \n");
+    printf("Quantos?  \n");
+    scanf("%d", &dependentes);
+
+    result = salario - (dependentes * 189.59); 
+   
+   //CondiÃ§Ãµes e calculo do IR
+
+  
+  if(result<= 1903.98){
+    printf("O salario informado Ã© isento de IR");
+   }
+   
+   else if(result>1903.98 && result<=2826.65){
+    paga = 0.075 * result - 142.80;
+    printf("Salario apto para pagamento do IR ! Valor a ser pago R$ %.2f", paga);
+   }
+   
+   else if(result >2826.65 && result <=3751.05){
+    paga = 0.15 * result - 354.80;
+    printf("Salario apto para pagamento do IR ! Valor a ser pago R$ %.2f", paga);
+   }
+   
+   else if(result >3751.05 && result <=4664.68){
+    paga = 0.225 * salario - 636.13;
+    printf("Salario apto para pagamento do IR ! Valor a ser pago R$ %.2f", paga);
+   }
+   
+   else if(result>4664.68){
+    paga = 0.275* result - 869.36;
+    printf("Salario apto para pagamento do IR ! Valor a ser pago R$ %.2f", paga);
+   }
+
+    return 0;
+}
+
+//3-
+
+
+#include <stdio.h>
+
+int main() {
+
+long long num;
+
+int count = 0;
+printf("Por favor coloque um numero inteiro: ");
+scanf("%lld", &num);
+
+do {
+	num/= 10;
+	++count;
+	
+}	while(num!= 0);
+
+printf("Quantidade de algarimos: %d", count);
+	return 0;
+}
